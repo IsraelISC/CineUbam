@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to CodeIgniter 4!</title>
+    <title>Cine UBAM | La Mejor Opción</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
@@ -259,14 +260,31 @@
             <div class="form-group row">
                 <div class="form-group col-md-12">
                     <div class="row">
+
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="/KunFu.jpg" class="card-img-top" alt="...">
+                                <img src="https://i.ibb.co/MsYfY9v/Kung-Fu-Panda-3-poster.webp" class="card-img-top"
+                                    alt="..." height="490">
                                 <div class="card-body">
                                     <p class="card-text"><b>Kun Fu Panda 3</b></p>
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"> <i class="fa fa-ticket" aria-hidden="true"></i>
+                                        Comprar Entrada
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://i.ibb.co/TbT0ChC/w3-XORYUDx-H53iiu-WRw6nqr-Zdwyb-BM0k-I88-F9cc-Hi-Dmw-1024x1024-2x-jpg.webp"
+                                    class="card-img-top" alt="..." height="490">
+                                <div class="card-body">
+                                    <p class="card-text"><b>Avengers Infinity War</b></p>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"> <i class="fa fa-ticket" aria-hidden="true"></i>
                                         Comprar Entrada
                                     </button>
                                 </div>
@@ -274,19 +292,15 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="https://i.ibb.co/vj8bxbM/1102210.jpg" class="card-img-top" alt="..."
+                                    height="490">
                                 <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
+                                    <p class="card-text"><b>Coco</b></p>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"> <i class="fa fa-ticket" aria-hidden="true"></i>
+                                        Comprar Entrada
+                                    </button>
                                 </div>
                             </div>
                         </div>
