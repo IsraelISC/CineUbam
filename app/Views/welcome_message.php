@@ -8,6 +8,7 @@
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,18 +22,10 @@
         crossorigin="anonymous"></script>
 
 
+
     <!-- STYLES -->
 
     <style {csp-style-nonce}>
-        * {
-            transition: background-color 300ms ease, color 300ms ease;
-        }
-
-        *:focus {
-            background-color: rgba(221, 72, 20, .2);
-            outline: none;
-        }
-
         html,
         body {
             color: rgba(33, 37, 41, 1);
@@ -146,51 +139,6 @@
             padding: 2.5rem 1.75rem 3.5rem 1.75rem;
         }
 
-        section h1 {
-            margin-bottom: 2.5rem;
-        }
-
-        section h2 {
-            font-size: 120%;
-            line-height: 2.5rem;
-            padding-top: 1.5rem;
-        }
-
-        section pre {
-            background-color: rgba(247, 248, 249, 1);
-            border: 1px solid rgba(242, 242, 242, 1);
-            display: block;
-            font-size: .9rem;
-            margin: 2rem 0;
-            padding: 1rem 1.5rem;
-            white-space: pre-wrap;
-            word-break: break-all;
-        }
-
-        section code {
-            display: block;
-        }
-
-        section a {
-            color: rgba(221, 72, 20, 1);
-        }
-
-        section svg {
-            margin-bottom: -5px;
-            margin-right: 5px;
-            width: 25px;
-        }
-
-        .further {
-            background-color: rgba(247, 248, 249, 1);
-            border-bottom: 1px solid rgba(242, 242, 242, 1);
-            border-top: 1px solid rgba(242, 242, 242, 1);
-        }
-
-        .further h2:first-of-type {
-            padding-top: 0;
-        }
-
         footer {
             background-color: rgba(221, 72, 20, .8);
             text-align: center;
@@ -250,26 +198,24 @@
     <header>
         <div class="heroe">
             <h1>Cartelera</h1>
-
-
         </div>
-
     </header>
     <section class="profile-data blk-1">
         <div class="contenido">
             <div class="form-group row">
                 <div class="form-group col-md-12">
                     <div class="row">
-
                         <div class="col-md-4">
                             <div class="card">
                                 <img src="https://i.ibb.co/MsYfY9v/Kung-Fu-Panda-3-poster.webp" class="card-img-top"
                                     alt="..." height="490">
                                 <div class="card-body">
                                     <p class="card-text"><b>Kun Fu Panda 3</b></p>
+                                    <p class="card-text">Precio Unitario. $50 MXN</b></p>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"> <i class="fa fa-ticket" aria-hidden="true"></i>
+                                        data-bs-target="#exampleModal" onclick="Datos('Kun Fu Panda 3',50)"> <i
+                                            class="fa fa-ticket" aria-hidden="true"></i>
                                         Comprar Entrada
                                     </button>
                                 </div>
@@ -282,9 +228,11 @@
                                     class="card-img-top" alt="..." height="490">
                                 <div class="card-body">
                                     <p class="card-text"><b>Avengers Infinity War</b></p>
+                                    <p class="card-text">Precio Unitario. $60 MXN</b></p>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"> <i class="fa fa-ticket" aria-hidden="true"></i>
+                                        data-bs-target="#exampleModal" onclick="Datos('Avengers Infinity War',60)"> <i
+                                            class="fa fa-ticket" aria-hidden="true"></i>
                                         Comprar Entrada
                                     </button>
                                 </div>
@@ -296,9 +244,11 @@
                                     height="490">
                                 <div class="card-body">
                                     <p class="card-text"><b>Coco</b></p>
+                                    <p class="card-text">Precio Unitario. $30 MXN</b></p>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"> <i class="fa fa-ticket" aria-hidden="true"></i>
+                                        data-bs-target="#exampleModal" onclick="Datos('Coco',30)"> <i
+                                            class="fa fa-ticket" aria-hidden="true"></i>
                                         Comprar Entrada
                                     </button>
                                 </div>
@@ -334,33 +284,49 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Compra de Ticket</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <form>
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre Película</label>
+                            <label for="exampleInputEmail1" class="form-control" id="ValNombre">Nombre Película</label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Costo $Mxn</label>
+                            <label for="exampleInputEmail1" class="form-control" id="ValCosto">$
+                            </label>
+                            <div id="emailHelp" class="form-text">Recuerda que estos precios pueden variar según el día.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Cantidad de Personas</label>
+                            <input type="number" class="form-control" id="CantidadPersonas" onkeyup="CalcularTotal()"
+                                value="1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Total a Pagar $Mxn</label>
+                            <label for="exampleInputEmail1" class="form-control" id="ValTotal">$0 MXN
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa fa-times"
+                                aria-hidden="true"></i> Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="ComprarEntrada"> <i class="fa fa-money"
+                                aria-hidden="true"></i>
+                            Comprar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- SCRIPTS -->
-
-    <script>
-        function toggleMenu() {
-            var menuItems = document.getElementsByClassName('menu-item');
-            for (var i = 0; i < menuItems.length; i++) {
-                var menuItem = menuItems[i];
-                menuItem.classList.toggle("hidden");
-            }
-        }
-    </script>
-
-    <!-- -->
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="<?= base_url('Script/script.js') ?>"></script>
 </body>
 
 </html>
